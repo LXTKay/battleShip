@@ -54,7 +54,7 @@ export function updateFieldIcons(field, player){
       if(j.isHit && j.containingShip !== null
       && j.containingShip.isSunk()) displayIcon(x,y,"sunk",selectedGrid);
       if(j.isHit && j.containingShip == null) displayIcon(x,y,"missed",selectedGrid);
-      if(!j.isHit && j.containingShip !== null) displayIcon(x,y,"ship",selectedGrid);
+      if(!j.isHit && j.containingShip !== null && player != "CPU") displayIcon(x,y,"ship",selectedGrid);
       y++;
     });
   x++;
